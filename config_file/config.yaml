@@ -1,0 +1,20 @@
+artifacts_root: artifacts/
+
+ingestion:
+  root_dir: data/
+  download_url: "https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset"
+  kaggle_username: javithj
+  kaggle_api_key: "f0312e190fbb0ff10993f0a11fec45d2"
+  raw_data_dir: data/raw/
+  extracted_data_dir: data/raw_images/
+
+preprocessing:
+  root_dir: data/processed/
+  input_dir: data/raw_images/
+  output_dir: data/processed_images/
+  glioma_dir: data/processed_images/glioma/
+  meningioma_dir: data/processed_images/meningioma/
+  notumor_dir: data/processed_images/notumor/
+  pituitary_dir: data/processed_images/pituitary/
+
+
