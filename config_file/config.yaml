@@ -1,20 +1,36 @@
-artifacts_root: artifacts/
+artifacts_root: artifacts
 
 ingestion:
-  root_dir: data/
-  download_url: "https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset"
-  kaggle_username: javithj
-  kaggle_api_key: "f0312e190fbb0ff10993f0a11fec45d2"
-  raw_data_dir: data/raw/
-  extracted_data_dir: data/raw_images/
+  root_dir: artifacts/data/
+  download_url: "masoudnickparvar/brain-tumor-mri-dataset"
+  raw_data_dir: artifacts/data/raw/
+  extracted_data_dir: artifacts/data/extracted/
 
-preprocessing:
-  root_dir: data/processed/
-  input_dir: data/raw_images/
-  output_dir: data/processed_images/
-  glioma_dir: data/processed_images/glioma/
-  meningioma_dir: data/processed_images/meningioma/
-  notumor_dir: data/processed_images/notumor/
-  pituitary_dir: data/processed_images/pituitary/
+cleaning:
+  root_dir: artifacts/clean/data
+  source_data_dir: artifacts/data/raw
 
+transformation:
+  root_dir: artifacts/transform
+  source_data_dir: artifacts/clean/data
+  class_mode: categorical
+  saved_train_gen_path: artifacts/transform/train_gen.npy
+  saved_val_gen_path: artifacts/transform/val_gen.npy
+  saved_test_gen_path: artifacts/transform/test_gen.npy
 
+model_trainer:
+  root_dir: artifacts/trainer
+  model_path: artifacts/trainer/model.keras
+  train_gen_path: artifacts/transform/train_gen.npy
+  val_gen_path: artifacts/transform/val_gen.npy
+  mlflow_uri: file:./mlruns
+  experiment_name: NeuroScanBrainTumor
+
+evaluation:
+  root_dir: artifacts/evaluation
+  test_gen_path: artifacts/transform/test_gen.npy
+  model_file: artifacts/trainer/model.keras
+  metrics_file_path: artifacts/evaluation/metrics.json
+  confusion_matrix_plot_path: artifacts/evaluation/confusion_matrix.png
+  mlflow_uri: file:./mlruns
+  experiment_name: NeuroScanBrainTumor

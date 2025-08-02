@@ -4,7 +4,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO,format='%(asctime)s - %(levelname)s - %(message)s')
 
-project_name ="WattPredictor"
+project_name ="NeuroScan"
 
 list_of_files = [
     "config_file/config.yaml",

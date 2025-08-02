@@ -1,0 +1,24 @@
+stages:
+  feature:
+    cmd: python main.py --feature_pipeline
+    deps:
+      - src/NeuroScan/pipeline/feature_pipeline.py
+      - config_file/config.yaml
+      - config_file/params.yaml
+    outs:
+      - artifacts/data/raw/
+      - artifacts/data/extracted/
+      - artifacts/clean/data
+
+  model:
+    cmd: python main.py --model_pipeline
+    deps:
+      - src/NeuroScan/pipeline/model_pipeline.py
+      - config_file/config.yaml
+      - config_file/params.yaml
+    outs:
+      - artifacts/trainer/model.keras
+      - artifacts/evaluation/metrics.json
+      - artifacts/evaluation/confusion_matrix.png
+
+  

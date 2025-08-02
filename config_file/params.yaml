@@ -1,0 +1,21 @@
+cleaning:
+  image_size: 240
+  target_image_size: [240, 240]
+
+transform:
+  batch_size: 32
+  target_image_size: [240, 240]
+
+model_params:
+  input_shape: [240, 240, 3]
+  num_classes: 4
+  base_model_name: EfficientNetB1
+  learning_rate: 0.0001
+  epochs: 1
+  dropout_rate: 0.5
+  loss: categorical_crossentropy
+  monitor: val_accuracy
+  patience: 5
+  reduce_lr_factor: 0.3
+  reduce_lr_patience: 2
+  reduce_lr_min_delta: 0.001
