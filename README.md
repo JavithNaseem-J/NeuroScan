@@ -163,9 +163,11 @@ This is Under MIT license.
 **This tool is for educational and experimental purposes only.**
 Predictions should never be used for actual medical decision-making without proper clinical validation.
 
+![screencapture-localhost-8501-2025-08-03-21_00_03](https://github.com/user-attachments/assets/21ab8bed-f92c-4f9e-86da-c73975ce81ab)
+
 <img width="1920" height="2650" alt="screencapture-localhost-8501-2025-08-03-20_58_36" src="https://github.com/user-attachments/assets/71efcb33-5a22-4a85-92db-81b99eb9d988" />
 
-![screencapture-localhost-8501-2025-08-03-21_00_03](https://github.com/user-attachments/assets/21ab8bed-f92c-4f9e-86da-c73975ce81ab)
+
 
 
 
