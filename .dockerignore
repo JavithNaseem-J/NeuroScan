@@ -1,0 +1,95 @@
+# Git and version control
+.git
+.gitignore
+.github/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# Poetry
+poetry.lock
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and temporary files
+*.log
+logs/
+temp/
+tmp/
+
+# DVC files (keep only necessary ones)
+.dvc/
+*.dvc
+
+# MLflow artifacts (keep only necessary tracking)
+mlruns/
+mlartifacts/
+
+# Large data directories
+artifacts/
+notebooks/
+# Documentation
+docs/
+*.md
+
+# Research and experiments
+research/
+experiments/
+
+# Configuration (keep main config, ignore local overrides)
+config/config.yaml
+!src/NeuroScan/constants/__init__.py
+
+# Docker files (avoid recursion)
+docker-compose*.yml
+
+# CI/CD
+.github/
+
+# Environment variables
+.env*
+!.env.example
+
+# Coverage and testing
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
