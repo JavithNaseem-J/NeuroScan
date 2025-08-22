@@ -26,8 +26,7 @@ RUN poetry config virtualenvs.create false && \
 
 COPY . /app
 
-RUN poetry install --no-interaction --no-ansi --no-root || \
-    poetry install --no-interaction --no-ansi --no-root
+RUN poetry install --no-interaction --no-ansi --no-root
 
 EXPOSE 8501
 
